@@ -1,18 +1,17 @@
-'''
-Nombre:Elton Yael Hernandez Perez
-Fecha:10/11/2024
-Descripción:
-Conversión de tipos de datos (casting) en Python.
-'''
+# Nombre: Elton Yael Hernández Pérez
+# Fecha: 14/10/2024
+# Descripción:
+# Conversión de tipos de datos (casting) en Python.
 
 # Notas
-'''
+"""
 La conversión de tipos de datos implica manipular datos que no están en el tipo de dato requerido. Ejemplos:
 de cadena a entero, de cadena a número flotante, y viceversa.
-'''
+"""
+
 # *****   Conversión de cadena a entero     *****
 var_cadena = "951"
-var_int = int(951.8)
+var_int = int(var_cadena)  # Convertimos la cadena a un número entero
 
 # Utiliza la letra "f" antes de las comillas para indicar que la cadena será formateada.
 # Esto significa que puedes incluir variables y expresiones dentro de las llaves {}
@@ -21,23 +20,25 @@ print("Conversión de cadena a entero.")
 print(f"Número como cadena: {var_cadena}.")
 print(f"Número como int más uno: {var_int + 1}.")
 
-print(f"numero de clips de cadena entero {var_cadena}")
-print(f"este numero {var_cadena}")
+# Ejemplo de mal formato o cadena sin conversión
+print(f"El número en la cadena es: {var_cadena}")
 
 # *****   Conversión de cadena a flotante     *****
 var_cadena = "8.88"
-var_float = float(var_cadena)
+var_float = float(var_cadena)  # Convertimos la cadena a un número flotante
 print()
 print("Conversión de cadena a flotante.")
 print(f"Número como cadena: {var_cadena}.")
 print(f"Número como float más cero punto uno: {var_float + 0.1}.")
+
 # *****   Conversión de número a cadena     *****
 var_int = 123
 var_float = 123.321
 print()
 print("Conversión de número a cadena.")
-print(f"Los números {var_int} y {var_float} se convierten a cadena utilizando str(var_int): {str(var_cadena)}, y "
-      f"str(var_float): {str(var_float)}.")
+print(f"Los números {var_int} y {var_float} se convierten a cadena utilizando str(var_int): '{str(var_int)}', y "
+      f"str(var_float): '{str(var_float)}'.")
+
 # *****   Conversión a booleano     *****
 # Si el valor es 0, cadena vacía o None, la función bool regresa un valor de False. En caso contrario, regresa True.
 print()
@@ -59,14 +60,15 @@ print(f"¿El valor de {var_float} es verdadero? {es_verdadero}.")
 
 var_cadena = ""
 es_verdadero = bool(var_cadena)
-print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+print(f"¿El valor de una cadena vacía es verdadero? {es_verdadero}.")
 var_cadena = None
 es_verdadero = bool(var_cadena)
-print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+print(f"¿El valor None es verdadero? {es_verdadero}.")
 var_cadena = " "
 es_verdadero = bool(var_cadena)
-print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+print(f"¿El valor de una cadena con un espacio es verdadero? {es_verdadero}.")
 
+# ***** Parte a: Conversión de número a cadena *****
 num1 = 3.14159265
 num2 = 12
 num3 = 0
@@ -97,9 +99,9 @@ str_num1 = "10002"
 str_num2 = "100.02"
 str_num3 = "0"
 
-int_num1 = int(str_num1)
-float_num2 = float(str_num2)
-int_num3 = int(str_num3)
+int_num1 = int(str_num1)     # Convierte la cadena a un entero
+float_num2 = float(str_num2) # Convierte la cadena a un flotante
+int_num3 = int(str_num3)     # Convierte la cadena a un entero
 
 print("Parte c:")
 print(f"La cadena '{str_num1}' convertida a entero es: {int_num1}")
@@ -116,4 +118,3 @@ print("Parte d:")
 print(f"El valor booleano de la cadena '{str_num1}' es: {bool_str1}")
 print(f"El valor booleano de la cadena '{str_num2}' es: {bool_str2}")
 print(f"El valor booleano de la cadena '{str_num3}' es: {bool_str3}")
-
