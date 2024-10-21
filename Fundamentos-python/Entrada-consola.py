@@ -1,6 +1,6 @@
 '''
-Nombre:
-Fecha:
+Nombre:Elton Yael Hernández Pérez
+Fecha:20/10/2024
 Descripción:
 Entrada de datos por consola para interacturar con el usuario con valores dinámicos.
 '''
