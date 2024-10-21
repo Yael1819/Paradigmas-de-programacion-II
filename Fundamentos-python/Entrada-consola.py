@@ -15,7 +15,7 @@ print(f"El resultado de {numero1_cadena} y {numero2_cadena} es: {resultado_caden
 # Comentar por qué se realiza el casting de variables.
 numero1_float = float(numero1_cadena)
 numero2_float = float(numero2_cadena)
-resultado_float = numero1_float + numero2_float # Verificar qué es lo que realiza de esta manera y compáralo.
+resultado_float = numero1_float + numero2_float  # Verificar qué es lo que realiza de esta manera y compáralo.
 print()
 print(" ****  Casting de varibles  ****")
 print(f"El resultado de {numero1_float} y {numero2_float} es: {resultado_float}")
