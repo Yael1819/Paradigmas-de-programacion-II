@@ -31,23 +31,23 @@ doble_aste = numero1 ** numero2
 # Calcula la división entera del primer número entre el segundo (sin decimales)
 diagonal = numero1 // numero2
 
-# Muestra el resultado de la suma con un mensaje descriptivo
+# Muestra el resultado de la suma
 print(f"El resultado de la suma entre {numero1} y {numero2} es: {suma}")
 
-# Muestra el resultado de la resta con un mensaje descriptivo
+# Muestra el resultado de la resta
 print(f"El resultado de la resta entre {numero1} y {numero2} es: {resta}")
 
-# Muestra el resultado de la multiplicación con un mensaje descriptivo
+# Muestra el resultado de la multiplicación
 print(f"El resultado de la multiplicación entre {numero1} y {numero2} es: {mult}")
 
-# Muestra el resultado de la división con tres decimales y un mensaje descriptivo
+# Muestra el resultado de la división con tres decimales
 print(f"El resultado de la división entre {numero1} y {numero2} es: {division:.3f}")
 
-# Muestra el resultado del módulo (residuo) con un mensaje descriptivo
+# Muestra el resultado del módulo (residuo)
 print(f"El residuo de dividir {numero1} entre {numero2} es: {modulo}")
 
-# Muestra el resultado de la potenciación con un mensaje descriptivo
+# Muestra el resultado de la potenciación
 print(f"El resultado de {numero1} elevado a la potencia de {numero2} es: {doble_aste}")
 
-# Muestra el resultado de la división entera con un mensaje descriptivo
+# Muestra el resultado de la división entera
 print(f"El resultado de la división entera entre {numero1} y {numero2} es: {diagonal}")
