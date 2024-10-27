@@ -1,21 +1,18 @@
 # Nombre: Elton Yael Hernández Pérez
 # Fecha: 23/10/2024
-# Descripción:
-# Este programa identifica la estación del año en función del número de mes ingresado.
-# Compara el mes con varios rangos para determinar si es primavera, verano, otoño o invierno.
+# Descripción: Este programa compara dos números ingresados por el usuario
+# y determina cuál es menor. Si son iguales, también lo indica.
 
-print("*** Programa que determina la estación del año ***")
-# Solicita al usuario que ingrese el número de un mes (1-12)
-num1 = int(input("Ingrese el número del mes: "))
+print("*** Programa para determinar cuál de los dos números es menor ***")  # Muestra el título del programa.
 
-# Determina la estación en función del número del mes
-if num1 == 3 or num1 == 4 or num1 == 5:
-    print("Primavera")  # Meses de marzo, abril, mayo
-elif num1 == 6 or num1 == 7 or num1 == 8:
-    print("Verano")  # Meses de junio, julio, agosto
-elif num1 == 9 or num1 == 10 or num1 == 11:
-    print("Otoño")  # Meses de septiembre, octubre, noviembre
-elif num1 == 12 or num1 == 1 or num1 == 2:
-    print("Invierno")  # Meses de diciembre, enero, febrero
+# Solicitar la entrada de los dos números
+num1 = int(input("Ingrese un número: "))  # Primer número ingresado por el usuario
+num2 = int(input("Ingrese otro número: "))  # Segundo número ingresado por el usuario
+
+# Comparar los números e imprimir el resultado
+if num1 < num2:
+    print(f"El número {num1} es menor que {num2}")  # Indica que num1 es menor
+elif num2 < num1:
+    print(f"El número {num2} es menor que {num1}")  # Indica que num2 es menor
 else:
-    print("Fuera de rango: mes incorrecto")  # Mensaje para valores fuera del rango 1-12
+    print("Ambos números son iguales.")  # Mensaje si ambos números son iguales
