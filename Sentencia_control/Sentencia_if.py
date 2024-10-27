@@ -5,7 +5,7 @@
 # Pide la edad del usuario y evalúa si es mayor o igual a 18,
 # mostrando un mensaje acorde si cumple la condición.
 
-# Solicita al usuario que ingrese su edad
+# Solicita al usuario que ingrese su edad actual
 edad = int(input("Ingrese su edad: "))
 
 # Verifica si la edad es mayor o igual a 18
