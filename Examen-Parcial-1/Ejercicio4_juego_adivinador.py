@@ -5,9 +5,9 @@ import random
 print("***Juego del adivinador**")
 i=1
 b=0
-num = int(input(f"Número de intentos: {i},Ingrese un número(1-100):"))
+adivina = random.randint(1, 100)
 while i <= 5:
-    adivina = random.randint(1, 100)
+
     num = int(input(f"Número de intentos: {i},Ingrese un número(1-100):"))
     if adivina > num:
         print("El número a adivinar es mayor.")
