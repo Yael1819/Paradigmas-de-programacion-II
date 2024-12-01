@@ -1,6 +1,6 @@
 # Nombre: Elton Yael Hernández Pérez
 # Fecha: 1/12/2024
-# Descripción: Programa para jugar a Piedra, Papel o Tijera usando diccionarios
+# Descripción:Programa para jugar a Piedra, Papel o Tijera usando diccionarios
 
 import random
 
