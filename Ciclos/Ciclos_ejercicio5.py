@@ -31,4 +31,4 @@ for i in range(1, n + 1):                 # Itera desde 1 hasta n
 print("\nTriángulo 3:")
 for i in range(n, 0, -1):                # Itera desde n hasta 1 (triángulo invertido)
     espacios = espacio * (n - i)         # Calcula los espacios necesarios para alinear a la derecha
-    print(f"{espacios}{asterisco * i}")  # Combina espacios y asteriscos para cada fila
+    print(f"{espacios}{asterisco * i}")   # Combina espacios y asteriscos para cada fila
