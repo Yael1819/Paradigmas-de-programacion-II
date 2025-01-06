@@ -1,14 +1,17 @@
 class Config:
-
-    """Constructor"""
     def __init__(self):
-        self.game_title = "Tank Battle"  # Título del juego.
-        self.screen_width = 1080  # Largo de la pantalla.
-        self.screen_height = 720  # Alto de la pantalla.
-        self.background_image_path = "media/fondo.jpg"  # Ruta de la imagen de fondo.
-
-        # Configuraciones del alumno
-        self.tank_speed = 4  # Velocidad del movimiento del alumno. Colocar float.
-
-        # Configuraciones de la laptop (arma)
+        self.game_title = "Tank Battle"
+        self.screen_width = 1080
+        self.screen_height = 720
+        self.background_image_path = "media/fondo.jpg"
+        self.tank_speed = 4
         self.bala_speed = 7
+
+        # Definir la posición de las paredes [x, y, ancho, alto]
+        self.paredes = [
+            [300, 100, 50, 200],  # Pared vertical izquierda
+            [700, 100, 50, 200],  # Pared vertical derecha
+            [300, 500, 50, 200],  # Pared vertical inferior izquierda
+            [700, 500, 50, 200],  # Pared vertical inferior derecha
+            [400, 300, 200, 50],  # Pared horizontal central
+        ]
