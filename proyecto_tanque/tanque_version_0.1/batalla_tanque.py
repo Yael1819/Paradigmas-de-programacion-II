@@ -12,6 +12,24 @@ def run_game():
     screen = pygame.display.set_mode(screen_size)
     pygame.display.set_caption(tank_config.game_title)
 
+    # Inicializar sonidos
+    sonido_disparo = pygame.mixer.Sound("media/disparo.mp3")
+    sonido_vacio = pygame.mixer.Sound("media/vacio.mp3")
+    sonido_botiquin = pygame.mixer.Sound("media/recoger_botiquin.mp3")
+    sonido_municion = pygame.mixer.Sound("media/recoger_municion.mp3")
+
+    # Ajustar volumen
+    for sonido in [sonido_disparo, sonido_vacio, sonido_botiquin, sonido_municion]:
+        sonido.set_volume(0.5)
+
+
+
+    # Crear grupos de sprites
+    botiquines = Group()
+    municiones = Group()
+
+    # Configurar temporizador para generar recursos
+    pygame.time.set_timer(pygame.USEREVENT, 10000)  # Cada 10 segundos
 
     # Crear paredes
     paredes = []
@@ -28,9 +46,8 @@ def run_game():
     balas_group = Group()
 
     while True:
-        game_functionalities.game_events(tank_config, screen, tanque1, tanque2, balas_group, paredes)
-        game_functionalities.screen_refresh(tank_config, screen, tanque1, tanque2, balas_group, paredes)
-
+        game_functionalities.game_events(tank_config, screen, tanque1, tanque2, balas_group, paredes, botiquines, municiones, sonido_disparo, sonido_vacio)
+        game_functionalities.screen_refresh(tank_config, screen, tanque1, tanque2, balas_group, paredes, botiquines, municiones)
 
 run_game()
 

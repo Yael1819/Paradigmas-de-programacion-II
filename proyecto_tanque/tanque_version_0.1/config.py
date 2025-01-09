@@ -4,8 +4,8 @@ class Config:
         self.screen_width = 1080
         self.screen_height = 720
         self.background_image_path = "media/fondo.jpg"
-        self.tank_speed = 4
-        self.bala_speed = 7
+        self.tank_speed = 6
+        self.bala_speed = 8
 
         # Definir la posición de las paredes [x, y, ancho, alto]
         self.paredes = [
@@ -13,5 +13,5 @@ class Config:
             [700, 100, 50, 200],  # Pared vertical derecha
             [300, 500, 50, 200],  # Pared vertical inferior izquierda
             [700, 500, 50, 200],  # Pared vertical inferior derecha
-            [400, 300, 200, 50],  # Pared horizontal central
+            [400, 380, 200, 50],  # Pared horizontal central
         ]

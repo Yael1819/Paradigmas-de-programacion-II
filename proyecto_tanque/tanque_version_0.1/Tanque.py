@@ -16,17 +16,18 @@ class Tanque:
         self.is_moving_down = False
         self.direction = 'up'
         self.balas_disparadas = 0
-        self.max_balas = 3
-        self.tiempo_ultima_bala = 0  # Tiempo del último disparo
+        self.max_balas = 10
+        self.vida = 100
+        self.tiempo_ultima_bala = 0
         self.retraso_disparo = 750
-        self.vida = 100  # Nueva propiedad para la vida del tanque
         self.eliminado = False
         self.imagen_destruccion = pygame.image.load("media/bander.png")
+        self.puede_disparar = True
 
     def recibir_dano(self, dano):
         self.vida -= dano
         if self.vida <= 0:
-            self.vida = 0  # Asegurar que la vida no sea negativa
+            self.vida = 0
             self.eliminado = True
             self.cambiar_a_imagen_destruccion()
 
@@ -35,7 +36,6 @@ class Tanque:
         old_center = self.image_rect.center
         self.image_rect = self.image.get_rect()
         self.image_rect.center = old_center
-
 
     def update_direction(self):
         if self.is_moving_up:
@@ -83,18 +83,15 @@ class Tanque:
             nueva_posicion.centery += self.tank_speed
             self.direction = 'down'
 
-        # Verificar colisiones con los límites de la pantalla y paredes
         puede_moverse = True
         if (nueva_posicion.left >= 0 and
                 nueva_posicion.right <= self.tank_config.screen_width and
                 nueva_posicion.top >= 0 and
                 nueva_posicion.bottom <= self.tank_config.screen_height):
 
-            # Verificar colisión con el otro tanque
             if nueva_posicion.colliderect(otro_tanque.image_rect):
                 puede_moverse = False
 
-            # Verificar colisión con paredes
             for pared in paredes:
                 if nueva_posicion.colliderect(pared.rect):
                     puede_moverse = False
@@ -105,6 +102,7 @@ class Tanque:
                 self.image_rect_centerx = float(self.image_rect.centerx)
                 self.image_rect_centery = float(self.image_rect.centery)
                 self.rotate_image()
+
     def blitme(self):
         self.screen.blit(self.image, self.image_rect)
 
@@ -112,5 +110,5 @@ class Tanque:
         self.tiempo_ultima_bala = pygame.time.get_ticks()
 
     def can_shoot(self, current_time):
-        return self.balas_disparadas < self.max_balas and (current_time - self.tiempo_ultima_bala > self.retraso_disparo)
-
+        return (self.balas_disparadas < self.max_balas and
+                current_time - self.tiempo_ultima_bala > self.retraso_disparo)
